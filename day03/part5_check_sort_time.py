@@ -32,7 +32,6 @@ def check_time(func, datas:list):
     end_time = time.time()
     return end_time - start_time
 
-
 if __name__ == "__main__":
     # 기준 데이터 생성
     datas = gen_rand_list(1000)
