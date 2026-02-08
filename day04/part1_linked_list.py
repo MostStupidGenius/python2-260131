@@ -16,6 +16,9 @@ class Node():
     
     def __str__(self) -> str:
         return f"Node({self.data})"
+    
+    def __repr__(self) -> str:
+        return self.__str__()
 
 # 연결리스트 클래스
 # 시작이 될 노드를 self.head로 저장한다.
@@ -148,13 +151,8 @@ if __name__ == "__main__":
     
     print("=" * 5, "데이터 추출", "=" * 5)
     print(link.extract_datas_to_list()) # 리스트로 출력
-    for node in link.extract_datas_to_list(1):
-        print(node, end=" ")
+    print(link.extract_datas_to_list(1)) # 리스트로 출력
 
-
-
-
-
-
-
-
+    # 위에서 __repr__을 설정하면 아래 코드는 필요없다.
+    # for node in link.extract_datas_to_list(1):
+    #     print(node, end=" ")
