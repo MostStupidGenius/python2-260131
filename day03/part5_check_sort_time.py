@@ -33,11 +33,13 @@ def check_time(func, datas:list):
     return end_time - start_time
 
 if __name__ == "__main__":
-    from part1_sort_quick import quick_sort
+    # from part1_sort_quick import quick_sort
     # 기준 데이터 생성
     datas = gen_rand_list(3000)
     # 데이터를 여러 함수에 동일하게 전달하기 위해 함수를 튜플로 저장
-    funcs = (bubble_sort, selection_sort, insertion_sort, quick_sort)
+    funcs = (bubble_sort, selection_sort, insertion_sort
+            # , quick_sort
+            )
     # for문을 이용해 각각의 함수를 check_time에 전달
     for func in funcs:
         # 실행시간을 측정하기 위해 같은 데이터를 넣어야 한다.
