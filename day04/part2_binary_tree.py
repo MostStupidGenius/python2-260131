@@ -31,7 +31,7 @@ class BinaryTree():
     def append(self, data:int):
         # 시작 노드는 루트 노드로 설정한다.
         current = self.root
-        root = 3
+        
         # 새로 추가할 노드를 변수에 저장
         new_node = Node(data)
         # 만약 루트 노드가 None이라면, .root를 Node(data)로 설정한다
