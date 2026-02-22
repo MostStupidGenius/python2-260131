@@ -12,6 +12,9 @@ from part2_sort_bubble_adv import bubble_sort
 from part3_sort_selection import selection_sort
 from part4_sort_insertion import insertion_sort
 
+import __init__
+from day06.part2_sort_heap import heap_sort
+
 # 랜덤 데이터를 생성하여 리스트를 반환하는 함수
 def gen_rand_list(size:int=10, start:int=1, end:int=100):
     # 안 쓰지만 만들어야 하는 변수는 언더바(스코어)로 표현한다.
@@ -33,14 +36,15 @@ def check_time(func, datas:list):
     return end_time - start_time
 
 if __name__ == "__main__":
-    # from part1_sort_quick import quick_sort
-    # from part2_sort_merge import merge_sort
+    from day05.part1_sort_quick import quick_sort
+    from day05.part2_sort_merge import merge_sort
     # 기준 데이터 생성
     datas = gen_rand_list(3000)
     # 데이터를 여러 함수에 동일하게 전달하기 위해 함수를 튜플로 저장
     funcs = (bubble_sort, selection_sort, insertion_sort
-            # , quick_sort
-            # , merge_sort
+            , quick_sort
+            , merge_sort
+            , heap_sort
             )
     # for문을 이용해 각각의 함수를 check_time에 전달
     for func in funcs:
